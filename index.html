@@ -36,9 +36,12 @@
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="img\thumb1.png"></li>
-            <li><img src="img\thumb2.png"></li>
-            <li><img src="img\thumb3.png"></li>
+            <li><img class="th1" src="img\thumb1.png" onclick="change_img('img/img1.png');change_background('#387D4C')">
+            </li>
+            <li><img class="th2" src="img\thumb2.png" onclick="change_img('img/img2.png');change_background('#eb7495')">
+            </li>
+            <li><img class="th3" src="img\thumb3.png" onclick="change_img('img/img3.png');change_background('#d752b1')">
+            </li>
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="img\instagram.png" class="ig"></a></li>
@@ -46,6 +49,17 @@
             <li><a href="#"><img src="img\facebook.png" class="fb"></a></li>
         </ul>
     </section>
+    <script>
+        function change_img(e) {
+            document.querySelector('.starbucks').src = e;
+        }
+        function change_background(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+
+    </script>
 </body>
 
 </html>
